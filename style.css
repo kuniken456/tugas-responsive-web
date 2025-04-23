@@ -1,3 +1,4 @@
+/* Ini adalah background paling belakang berupa gambar */
 body {
     background-image: url(images/Elysia.jpg);
     background-size: cover;
@@ -77,6 +78,7 @@ img {
     background-color: rgba(35, 35, 35, 0.4);
 
 }
+/* di sini saya menggunakan .overlay karena saya ingin gambar di bagian paling belakang tidak terlalu mencolok sehingga saya menggunakan overlay ini untuk memberikan layer hitam dan sedikit transparan */
 .overlay {
     position: absolute;
     top: 0;
@@ -92,7 +94,7 @@ img {
     animation: fadeUp 1s ease-out forwards;
     opacity: 0; 
 }
-
+/* ini hanya untuk hiasan sedikit agar pada saat membuka web ada sedikit animasi fadeUp */
 @keyframes fadeUp {
     from {
       transform: translateY(40px);
@@ -108,7 +110,7 @@ img {
     animation: fadeUp 1s ease-out forwards;
     opacity: 0; 
 }
-
+/*agar pada saat membuka web dengan ukuran layar dibawah 600px maka akan menampilkan tampilan yang lebih kecil untuk ukuran layar kecil*/
 @media screen and (max-width: 600px) {
     .button-container {
         flex-direction: column;
@@ -131,12 +133,12 @@ button {
     padding: 12px 12px;
     font-size: 16px;
     border: none;
-    border-radius: 999px;
+    border-radius: 999px;        
     cursor: pointer;
     transition: transform 0.2s ease;
     
 }
-
+/* agar saat button di hover maka akan muncul animasi jadi tidak terlihat statik */
 button:hover {
    transform: scale(1.1);
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -148,6 +150,7 @@ button:hover {
     justify-content: center;
     padding-bottom: 10px;
 }
+
 footer {
     width: 100%;
     background-color: #111;
